@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdultVisitor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooGroup03</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo03group</a> &gt; <span class="el_source">AdultVisitor.java</span></div><h1>AdultVisitor.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo03group;
+
+/**
+ * This class is about Adult Visitor which visitor
+ * @author Hari Hara Mummadi
+ */
+public class AdultVisitor extends Visitor{
+
+    /**
+     * Constructor for Adult Visitor Class
+     * @param visitorCategory
+     * @param ticketPrice
+     * @param name
+     * @param email
+     * @param phoneNumber
+     */
+    public AdultVisitor(VisitorCategory visitorCategory, String ticketPrice, String name, String email, int phoneNumber) {
+<span class="fc" id="L22">        super(visitorCategory, ticketPrice, name, email, phoneNumber);</span>
+<span class="fc" id="L23">    }</span>
+
+    /**
+     * Over riding the Ticket Price For Adult visitor
+     */
+    @Override
+    public void ticketPrice() {
+<span class="fc" id="L30">        System.out.println(&quot;Zoo Entry Ticket price for the Adult Visitor is : 8.5$&quot;);</span>
+<span class="fc" id="L31">    }</span>
+
+    /**
+     * Over riding the Visitor Category for Adult Visitor 
+     */
+    @Override
+    public void visitorCategory() {
+<span class="fc" id="L38">        System.out.println(&quot;I am an Adult Visitor&quot;);</span>
+<span class="fc" id="L39">    }</span>
+
+    /**
+     * Method for Visitor Occupation of Adult Visitor
+     */
+    public void visitorOccupation(){
+<span class="fc" id="L45">        System.out.println(&quot;Adult Visitor Occupation is : Sales Manager&quot;);</span>
+<span class="fc" id="L46">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

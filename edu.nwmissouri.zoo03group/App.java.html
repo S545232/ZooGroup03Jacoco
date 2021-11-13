@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooGroup03</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo03group</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo03group;
+
+/**
+ * App class to execute the whole application and which contains the main  function where execution begins
+ * @author S545232
+ */
+<span class="nc" id="L7">public class App {</span>
+
+    private static final String WELCOME_MESSAGE = &quot;Welcome to the Peaky Blinders Zoo!! \n&quot;;
+    private static final String VISIT_AGAIN_MESSAGE = &quot;Thank you for visiting, Please visit again!! \n&quot;;
+
+    /**
+     * main function is calling all the visitor and employee sub classes
+     * @param args
+     */
+    public static void main(String[] args) {
+<span class="nc" id="L17">        System.out.println(WELCOME_MESSAGE);</span>
+
+<span class="nc" id="L19">        initVisitorCategories();</span>
+<span class="nc" id="L20">        initFirstTimeVisitor();</span>
+<span class="nc" id="L21">        initStudentVisitor();</span>
+<span class="nc" id="L22">        initChildVisitor();</span>
+<span class="nc" id="L23">        initSeniorCitizenVisitor();</span>
+<span class="nc" id="L24">        initAdultVisitor();</span>
+<span class="nc" id="L25">        initEmployeeCategories();</span>
+<span class="nc" id="L26">        initEmployeeCareTaker();</span>
+<span class="nc" id="L27">        initEmployeeRescueOperator();</span>
+<span class="nc" id="L28">        initEmployeeGuide();</span>
+<span class="nc" id="L29">        initZooMaintainer();</span>
+
+<span class="nc" id="L31">        System.out.println(VISIT_AGAIN_MESSAGE);</span>
+<span class="nc" id="L32">    }</span>
+
+    private static void initVisitorCategories() {
+<span class="nc" id="L35">        System.out.println(&quot;Available visitor categories are : \n&quot;</span>
+                + VisitorCategory.FIRST_TIME_VISITOR + &quot;\n&quot;
+                + VisitorCategory.STUDENT_VISITOR + &quot;\n&quot;
+                + VisitorCategory.SENIOR_CITIZEN_VISITOR + &quot;\n&quot;
+                + VisitorCategory.CHILD_VISITOR + &quot;\n&quot;
+                + VisitorCategory.ADULT_VISITOR + &quot;\n&quot;
+        );
+<span class="nc" id="L42">    }</span>
+
+    private static void initFirstTimeVisitor() {
+<span class="nc" id="L45">        FirstTimeVisitor firstTimeVisitor = new FirstTimeVisitor(VisitorCategory.FIRST_TIME_VISITOR, &quot;10$&quot;, &quot;James Cameron&quot;, &quot;james@live.com&quot;, 989578575);</span>
+<span class="nc" id="L46">        System.out.println(firstTimeVisitor.toString());</span>
+<span class="nc" id="L47">        firstTimeVisitor.ticketPrice();</span>
+<span class="nc" id="L48">        firstTimeVisitor.visitorCategory();</span>
+<span class="nc" id="L49">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L50">    }</span>
+
+    private static void initStudentVisitor() {
+<span class="nc" id="L53">        StudentVisitor studentVisitor = new StudentVisitor(VisitorCategory.STUDENT_VISITOR, &quot;6$&quot;, &quot;Christopher Nolan&quot;, &quot;nolan@gmail.com&quot;, 660987542, &quot;School of California&quot;);</span>
+<span class="nc" id="L54">        System.out.println(studentVisitor.toString());</span>
+<span class="nc" id="L55">        studentVisitor.ticketPrice();</span>
+<span class="nc" id="L56">        studentVisitor.visitorCategory();</span>
+<span class="nc" id="L57">        studentVisitor.school();</span>
+<span class="nc" id="L58">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L59">    }</span>
+
+    private static void initChildVisitor() {
+<span class="nc" id="L62">        ChildVisitor childVisitor = new ChildVisitor(VisitorCategory.CHILD_VISITOR, &quot;5$&quot;, &quot;jj rodson&quot;, &quot;rodson@gmail.com&quot;, 440675377, 4, &quot;I need a Stroller&quot;);</span>
+<span class="nc" id="L63">        System.out.println(childVisitor.toString());</span>
+<span class="nc" id="L64">        childVisitor.ticketPrice();</span>
+<span class="nc" id="L65">        childVisitor.visitorCategory();</span>
+<span class="nc" id="L66">        childVisitor.age();</span>
+<span class="nc" id="L67">        childVisitor.zooStroller();</span>
+<span class="nc" id="L68">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L69">    }</span>
+
+    private static void initSeniorCitizenVisitor() {
+<span class="nc" id="L72">        SeniorCitizenVisitor seniorCitizenVisitor = new SeniorCitizenVisitor(VisitorCategory.SENIOR_CITIZEN_VISITOR, &quot;4$&quot;, &quot;Cillian Murphy&quot;, &quot;murphy@gmail.com&quot;, 62, &quot;I need Wheel Chair&quot;);</span>
+<span class="nc" id="L73">        System.out.println(seniorCitizenVisitor.toString());</span>
+<span class="nc" id="L74">        seniorCitizenVisitor.ticketPrice();</span>
+<span class="nc" id="L75">        seniorCitizenVisitor.visitorCategory();</span>
+<span class="nc" id="L76">        seniorCitizenVisitor.age();</span>
+<span class="nc" id="L77">        seniorCitizenVisitor.zooWheelChair();</span>
+<span class="nc" id="L78">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L79">    }</span>
+
+    private static void initAdultVisitor() {
+<span class="nc" id="L82">        AdultVisitor adultVisitor = new AdultVisitor(VisitorCategory.ADULT_VISITOR, &quot;8.5$&quot;, &quot;Ryan Rodney Reynolds&quot;, &quot;ryan@gmail.com&quot;, 514778899);</span>
+<span class="nc" id="L83">        System.out.println(adultVisitor.toString());</span>
+<span class="nc" id="L84">        adultVisitor.ticketPrice();</span>
+<span class="nc" id="L85">        adultVisitor.visitorCategory();</span>
+<span class="nc" id="L86">        adultVisitor.visitorOccupation();</span>
+<span class="nc" id="L87">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L88">    }</span>
+
+    private static void initEmployeeCategories() {
+<span class="nc" id="L91">        System.out.println(&quot;Available Zoo Employee categories are : \n&quot;</span>
+                + EmployeeCategory.EMPLOYEE_CARE_TAKER + &quot;\n&quot;
+                + EmployeeCategory.EMPLOYEE_RESCUE_OPEARTORS + &quot;\n&quot;
+                + EmployeeCategory.EMPLOYEE_GUIDE + &quot;\n&quot;
+                + EmployeeCategory.ZOO_MAINTAINER + &quot;\n&quot;
+        );
+<span class="nc" id="L97">    }</span>
+
+    private static void initEmployeeCareTaker() {
+<span class="nc" id="L100">        EmployeeCareTaker employeeCareTaker = new EmployeeCareTaker(865432, EmployeeCategory.EMPLOYEE_CARE_TAKER, &quot;David&quot;, &quot;9am-5pm&quot;, &quot;David&quot;, &quot;david@gmail.com&quot;, 834569972);</span>
+<span class="nc" id="L101">        System.out.println(employeeCareTaker.toString());</span>
+<span class="nc" id="L102">        employeeCareTaker.employeeShiftTimings();</span>
+<span class="nc" id="L103">        employeeCareTaker.employeeCategory();</span>
+<span class="nc" id="L104">        employeeCareTaker.employeeID();</span>
+<span class="nc" id="L105">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L106">    }</span>
+
+    private static void initEmployeeRescueOperator() {
+
+<span class="nc" id="L110">        EmployeeRescueOperators employeeRescueOperators = new EmployeeRescueOperators(673739, EmployeeCategory.EMPLOYEE_RESCUE_OPEARTORS, &quot;John Greesham&quot;, &quot;6AM-1PM&quot;, &quot;John Greesham&quot;, &quot;john@gmail.com&quot;, 788292829);</span>
+<span class="nc" id="L111">        System.out.println(employeeRescueOperators.toString());</span>
+<span class="nc" id="L112">        employeeRescueOperators.employeeCategory();</span>
+<span class="nc" id="L113">        employeeRescueOperators.employeeID();</span>
+<span class="nc" id="L114">        employeeRescueOperators.employeeShiftTimings();</span>
+<span class="nc" id="L115">        employeeRescueOperators.getInsuranceProvider();</span>
+<span class="nc" id="L116">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L117">    }</span>
+
+    private static void initEmployeeGuide() {
+<span class="nc" id="L120">        EmployeeGuide employeeGuide = new EmployeeGuide(682939, EmployeeCategory.EMPLOYEE_GUIDE, &quot;Tony Stark&quot;, &quot;10AM-6PM&quot;, &quot;Tony Stark&quot;, &quot;tony@gmail.com&quot;, 498288282);</span>
+<span class="nc" id="L121">        System.out.println(employeeGuide.toString());</span>
+<span class="nc" id="L122">        employeeGuide.employeeCategory();</span>
+<span class="nc" id="L123">        employeeGuide.employeeID();</span>
+<span class="nc" id="L124">        employeeGuide.employeeShiftTimings();</span>
+<span class="nc" id="L125">        employeeGuide.getLanguagesKnown();</span>
+<span class="nc" id="L126">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L127">    }</span>
+
+    private static void initZooMaintainer() {
+<span class="nc" id="L130">        ZooMaintainer zooMaintainer = new ZooMaintainer(692939, EmployeeCategory.ZOO_MAINTAINER, &quot;Jack Sparrow&quot;, &quot;9AM-7PM&quot;, &quot;Jack Sparrow&quot;, &quot;jack@gmail.com&quot;, 478828277);</span>
+<span class="nc" id="L131">        System.out.println(zooMaintainer.toString());</span>
+<span class="nc" id="L132">        zooMaintainer.employeeCategory();</span>
+<span class="nc" id="L133">        zooMaintainer.employeeID();</span>
+<span class="nc" id="L134">        zooMaintainer.employeeShiftTimings();</span>
+<span class="nc" id="L135">        zooMaintainer.getMaintenanceProvider();</span>
+<span class="nc" id="L136">        System.out.println(&quot;\n***********************************************************************************\n&quot;);</span>
+<span class="nc" id="L137">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

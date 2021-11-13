@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZooMaintainer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ZooGroup03</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo03group</a> &gt; <span class="el_source">ZooMaintainer.java</span></div><h1>ZooMaintainer.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo03group;
+
+/**
+ *This class is Zoo Maintainer
+ * @author Saitej Veerabathini
+ */
+public class ZooMaintainer extends Employee {
+
+    /**
+     *This is a constructor for this class
+     * @param employeeID
+     * @param employeeCategory
+     * @param employeeName
+     * @param employeeShiftTimings
+     * @param name
+     * @param email
+     * @param phoneNumber
+     */
+    public ZooMaintainer(int employeeID, EmployeeCategory employeeCategory, String employeeName, String employeeShiftTimings, String name, String email, int phoneNumber) {
+<span class="fc" id="L24">        super(employeeID, employeeCategory, employeeName, employeeShiftTimings, name, email, phoneNumber);</span>
+<span class="fc" id="L25">    }</span>
+
+    /**
+     *Method to print Maintenance Provider
+     */
+    public void getMaintenanceProvider() {
+<span class="fc" id="L31">        System.out.println(&quot;SARUS company provides maintenance facility to the Zoo.&quot;);</span>
+<span class="fc" id="L32">    }</span>
+
+    /**
+     *Method to print Employee Shift Timings
+     */
+    @Override
+    public void employeeShiftTimings() {
+<span class="fc" id="L39">        System.out.println(&quot;My shift timings are : 9AM - 7PM&quot;);</span>
+<span class="fc" id="L40">    }</span>
+
+    /**
+     *Method to print Employee Name
+     */
+    @Override
+    public void employeeName() {
+<span class="fc" id="L47">        System.out.println(&quot;Employee Name : Jack Sparrow&quot;);</span>
+<span class="fc" id="L48">    }</span>
+
+    /**
+     *Method to print Employee Category
+     */
+    @Override
+    public void employeeCategory() {
+<span class="fc" id="L55">        System.out.println(&quot;I'm a Zoo maintainer&quot;);</span>
+<span class="fc" id="L56">    }</span>
+
+    /**
+     *Method to print Employee ID
+     */
+    @Override
+    public void employeeID() {
+<span class="fc" id="L63">        System.out.println(&quot;My Employee ID is: 692939&quot;);</span>
+<span class="fc" id="L64">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
